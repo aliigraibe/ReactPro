@@ -1,5 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
-import {  Logo, Navig,Nav ,Click, ThemeButton } from "../Styles";
+import {  Logo, Navig,Nav , ThemeButton } from "../Styles";
 
 const NavBar = (props) => {
   return (

@@ -1,6 +1,8 @@
 import { PhonePic } from "../Styles";
 import DeleteProduct from "../buttons/DeleteProduct"
 import { Link } from "react-router-dom";
+
+
 const ProductItem = (props) => {
   const product=props.product;
     return (

@@ -1,18 +1,16 @@
 
-import { Redirect, Router, useParams } from "react-router";
+import { Redirect, useParams } from "react-router";
 import { Link } from "react-router-dom";
-import products from "../products";
 import {Flxii, Logo, PhonePic} from "../Styles"
 
+
 const ProductDetal  = (props)=> {
+
   const  productSlug  = useParams().productSlug
   const product = props.products.find((product) => product.Slug === productSlug);
 if(!product) return <Redirect to ="/"/>
 
-
-
-
-  return (
+ return (
         <div><Flxii>
 <Link
 >

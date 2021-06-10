@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import {ThemeProvider} from "styled-components"
-import { Head,ThemeButton, ImageSize,GlobalStyle} from "./Styles"
+import { Head,GlobalStyle} from "./Styles"
 import ProductList from "./component/ProductList"
 import {Switch,Route } from "react-router"
 import Home from "./component/Home"
 import './App.css';
 import products from "./products";
 import ProductDetail from "./component/ProductDetail"
-//import productItem from "./component/ProductItem"
 
 
 import NavBar from "./component/NavBar";
@@ -33,10 +32,7 @@ function App() {
 
   const  [_products , setProduct  ] = useState(products );
 
-const deleteproduct=(productId)=>{
-let newproduct =_products.filter(product=>product.id!==productId)
-setProduct(newproduct)
-}
+
 
 const  [currentProduct, setCurrentProduct] = useState(null);
 const [currentTheme, setCurrentTheme] = useState("light");
@@ -54,12 +50,12 @@ setCurrentTheme(currentTheme === "light" ? "dark" : "light");
       <Switch>
       <Route exact path="/products/:productSlug">
   <ProductDetail products = {_products}
-  deleteproduct={deleteproduct}/>
+/>
 
 </Route>
 <Route exact path="/products">
 <ProductList setCurrentProduct={setCurrentProduct }
-products={_products}deleteproduct={deleteproduct}/>
+/>
 
 </Route>
 
